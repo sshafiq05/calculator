@@ -16,7 +16,6 @@ function calculate() {
     }
 }
 
-// New conversion functions
 function toBinary() {
     if (display.value) {
         display.value = parseInt(display.value).toString(2);
