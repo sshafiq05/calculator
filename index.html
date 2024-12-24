@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
     <div id="calculator">
         <input id="display" readonly>
         <div id="keys">
-            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="modeDec()" class="mode-btn">DEC</button>
-            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="modeBin()" class="mode-btn">BIN</button>
-            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="modeOct()" class="mode-btn">OCT</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="modeHex()" class="mode-btn">HEX</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
-            <button onclick="toBinary()" class="conv-btn">Bin</button>
-            <button onclick="toOctal()" class="conv-btn">Oct</button>
-            <button onclick="toHexadecimal()" class="conv-btn">Hex</button>
+            
+            <button class="num-btn" onclick="appendToDisplay('A')">A</button>
+            <button onclick="toBinary()" id ="binary-convert" class="conv-btn">Bin</button>
+            <button onclick="toOctal()" id ="octal-convert" class="conv-btn">Oct</button>
+            <button onclick="toDec()" id ="decimal-convert" class="conv-btn">Dec</button>
+            <button onclick="toHexadecimal()" id = "hex-convert" class="conv-btn">Hex</button>
+            <button class="num-btn" onclick="appendToDisplay('B')">B</button>
+            <button class="num-btn" onclick="appendToDisplay('7')">7</button>
+            <button class="num-btn" onclick="appendToDisplay('8')">8</button>
+            <button class="num-btn" onclick="appendToDisplay('9')">9</button>
+            <button onclick="setMode(2)" data-base="2" class="mode-btn">BIN</button>
+            <button class="num-btn" onclick="appendToDisplay('C')">C</button>
+            <button  class="num-btn" onclick="appendToDisplay('4')">4</button>
+            <button class="num-btn"  onclick="appendToDisplay('5')">5</button>
+            <button class="num-btn"  onclick="appendToDisplay('6')">6</button>
+            <button data-base="8" onclick="setMode(8)" class="mode-btn">OCT</button>
+            <button class="num-btn" onclick="appendToDisplay('D')">D</button>
+            <button class="num-btn" onclick="appendToDisplay('1')">1</button>
+            <button class="num-btn" onclick="appendToDisplay('2')">2</button>
+            <button class="num-btn" onclick="appendToDisplay('3')">3</button>
+            <button data-base="10" onclick="setMode(10)"class="mode-btn">DEC</button>
+            <button class="num-btn" onclick="appendToDisplay('E')">E</button>
+           <button onclick="clearDisplay()" class="operator-btn"><i class="fa fa-bomb" aria-hidden="true"></i></button>
+           <button class="num-btn" onclick="appendToDisplay('0')">0</button>
+           <button onclick="resetModes()" class="operator-btn"><i class="fa fa-refresh"></i></button>
+           <button onclick="setMode(16)" data-base="16"  class="mode-btn">HEX</button>
+           <button class="num-btn" onclick="appendToDisplay('F')">F</button>
+            
         </div>
     </div>
 
