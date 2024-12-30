@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 125vh;
     background: linear-gradient(320deg,#eb92be,#ffef78,#63c9b4)
 }
 #calculator{
@@ -67,6 +67,12 @@ button:active{
 .conv-btn:active{
     background-color: hsl(120, 65%, 65%);
 }
+.mode-btn{
+    background-color: hsl(213, 85%, 45%);
+}
+.mode-btn.hover{
+    background-color: hsl(213, 85%, 55%);
+}
 .mode-btn.active{
     background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
     /* background-color: #007bff; Highlight color */
@@ -76,6 +82,7 @@ button:active{
     transition: 0.4s ease-in-out;
     transition-property: color;
 }
+
 
  @keyframes animate {
         100% {
