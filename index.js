@@ -102,17 +102,17 @@ function TocheckBase() {
 
 function toBinary() {
     const input = display.value.trim();
-    if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(2);}
+    if (/^[0-9A-Fa-f]+$/.test(input)){NewCo(2);}
 
 }
     
 function toDec() {
-    convertToBase(10);
-    if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(10);}
+  
+    if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(10);}
 }
 function toOctal() 
 {  const input = display.value.trim();
-    if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(8);}
+    if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(8);}
 
 }
    
@@ -172,8 +172,19 @@ function resetModes() {
     }
 
 function NewCo(base){
-    if (display.value){
-        display.value = parseInt(display.value).toString(base).toUpperCase();
-        isConverted=true;
+    if (display.value) {
+        // Check if the current mode is already in the selected base
+        const currentBase = getCurrentBase(); // A helper function to determine the current base
+        if (currentBase !== base) {
+            // Convert from the current base to decimal, then to the new base
+            const decimalValue = parseInt(display.value, currentBase); // Convert current value to decimal
+            display.value = decimalValue.toString(base).toUpperCase(); // Convert decimal to the new base
+        }
+        isConverted = true;
     }
+}
+
+function getCurrentBase() {
+    const activeButton = document.querySelector('.mode-btn.active'); // Find the active mode button
+    return activeButton ? parseInt(activeButton.dataset.base) : 10; // Default to base 10 if none is active
 }
