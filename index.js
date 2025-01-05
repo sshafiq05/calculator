@@ -8,6 +8,7 @@ function appendToDisplay(input) {
     }
     display.value += input;
     if (display.value == 612025){display.value = "I LOVE ICO"}else{}
+    if (display.value == 922025){display.value = "WE <3 DR.ADIB"}else{}
 }
 
 function showButtonsForBase(base) {
