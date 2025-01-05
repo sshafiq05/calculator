@@ -7,7 +7,7 @@ function appendToDisplay(input) {
         isConverted=false; // Clear the display if a conversion was performed
     }
     display.value += input;
-    if (display.value == 99995){display.value = "I LOvE YOU"}else{}
+    if (display.value == 612025){display.value = "I LOVE ICO"}else{}
 }
 
 function showButtonsForBase(base) {
@@ -105,15 +105,13 @@ function toBinary() {
 
 }
     
-
 function toDec() {
     convertToBase(10);
     if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(10);}
-   // NewCo(10);
 }
 function toOctal() 
 {  const input = display.value.trim();
-    if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(8);}
+    if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(8);}
 
 }
    
