@@ -109,11 +109,11 @@ function toBinary() {
 function toDec() {
     convertToBase(10);
     if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(10);}
-    NewCo(10);
+   // NewCo(10);
 }
 function toOctal() 
 {  const input = display.value.trim();
-    if (/^[0-9A-Fa-f]+$/.test(input)) { convertToBase(10);}{NewCo(8);}
+    if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(8);}
 
 }
    
