@@ -106,8 +106,8 @@ function toBinary() {
 }
     
 function toDec() {
-  
-    if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(10);}
+    NewCo(10);
+    //if (/^[0-9A-Fa-f]+$/.test(input)) {NewCo(10);}
 }
 function toOctal() 
 {  const input = display.value.trim();
