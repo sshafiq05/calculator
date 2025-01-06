@@ -7,7 +7,6 @@ function appendToDisplay(input) {
         isConverted=false; // Clear the display if a conversion was performed
     }
     display.value += input;
-    if (display.value == 99995){display.value = "I LOvE YOU"}else{}
   if (display.value == 612025){display.value = "I LOVE ICO"}else{}
     if (display.value == 922025){display.value = "GOODLUCK!"}
 }
